@@ -1,0 +1,22 @@
+name: ExAntiBotFilter
+version: ${project.version}
+main: com.exantibotfilter.ExAntiBotFilter
+api-version: 1.13
+author: ExAntiBotFilter
+description: Cookie captcha based anti-bot filter. Java 8-25, Geyser/Floodgate supported.
+softdepend: [floodgate, Geyser-Spigot]
+load: STARTUP
+
+commands:
+  exantibotfilter:
+    description: Plugin admin command
+    aliases: [eabf, antibot]
+    usage: /eabf reload
+    permission: exantibotfilter.admin
+permissions:
+  exantibotfilter.admin:
+    description: Allows reloading the plugin
+    default: op
+  exantibotfilter.bypass:
+    description: Bypass the captcha (e.g. admins)
+    default: op
